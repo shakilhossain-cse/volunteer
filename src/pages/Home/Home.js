@@ -1,11 +1,11 @@
 import React from 'react'
-import Main from '../../components/Main/Main'
+import Banner from '../../components/Banner/Banner'
 
 
 export const Home = () => {
     return (
         <div>
-            <Main/>
+            <Banner/>
         </div>
     )
 }
