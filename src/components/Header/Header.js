@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="md:w-5/6 w-full mx-auto top-10 left-0 right-0 flex absolute z-20">
+    <div className="md:w-5/6 w-full px-4 mx-auto top-10 left-0 right-0 flex absolute z-20">
       <div className="w-2/4">
         <img src={Logo} className="h-12" />
       </div>
-      <ul className="flex justify-between items-center w-2/4 ">
+      <ul className="justify-between items-center w-2/4 hidden md:flex">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -23,7 +23,7 @@ const Header = () => {
         </li>
         <li>
           <Link
-            className="bg-blue-400 px-8 py-2 text-white rounded"
+            className="bg-blue-600 px-8 py-2 text-white rounded"
             to="/login"
           >
             Login

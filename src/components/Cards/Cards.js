@@ -1,12 +1,17 @@
 import React from "react";
+import Card from "../Card/Card";
 
 const Cards = () => {
   return (
-    <div className="bg-blue-100 h-screen">
+    <div>
       <div
-        className="md:w-5/6 w-full mx-auto absolute right-0 left-0"
-        style={{ top: "20rem" }}
-      ></div>
+        className="pb-4 md:w-5/6 w-full px-4 mx-auto absolute right-0 left-0"
+        style={{ top: "22.5rem" }}
+      >
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <Card />
+        </div>
+      </div>
     </div>
   );
 };

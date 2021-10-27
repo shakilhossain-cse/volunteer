@@ -12,9 +12,9 @@ const Banner = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="p-2 md:w-2/5 w-5/6 outline-none rounded-l-lg"
+            className="p-2 md:w-2/5  outline-none rounded-l-lg"
           />
-          <button className="bg-blue-300 py-2 px-5 outline-none rounded-r-lg">Search</button>
+          <button className="bg-blue-600 text-white py-2 px-5 outline-none rounded-r-lg">Search</button>
         </div>
       </div>
     </div>
