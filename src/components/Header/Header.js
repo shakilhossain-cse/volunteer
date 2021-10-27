@@ -32,7 +32,7 @@ const Header = () => {
         <li>
           <Link
             className="bg-black px-8 py-2 text-white rounded"
-            to="/"
+            to="/register"
           >
             Register
           </Link>
