@@ -8,7 +8,7 @@ const Header = () => {
       <div className="w-2/4">
         <img src={Logo} className="h-12" />
       </div>
-      <ul className="flex justify-between items-center w-2/4">
+      <ul className="flex justify-between items-center w-2/4 ">
         <li>
           <Link to="/">Home</Link>
         </li>
