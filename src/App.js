@@ -1,23 +1,29 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
+import Event from "./components/Event/Event";
+import AuthProvider from "./context/AuthProvider";
 import { Home } from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import PrivetRoute from "./Route/PrivetRoute";
 
 function App() {
   return (
-    <div>
+    <AuthProvider>
       <Router>
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <PrivetRoute path="/events">
+            <Event />
+          </PrivetRoute>
           <Layout>
-            <Route path="/" component={Home} exact/>
+            <Route path="/" component={Home} exact />
           </Layout>
         </Switch>
       </Router>
-    </div>
+    </AuthProvider>
   );
 }
 
