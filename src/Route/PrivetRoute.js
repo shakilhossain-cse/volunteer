@@ -1,26 +1,30 @@
 import React from 'react'
-import { Redirect, Route } from 'react-router';
+import { Route,Redirect } from 'react-router';
 import useAuth from '../hooks/useAuth';
 
 const PrivetRoute = ({ children, ...rest }) => {
-    
-    let auth = useAuth();
+  const { User, IsLoading } = useAuth();
+  
+  if (IsLoading) {
+    return  <p className="text-red-500">Loading...</p>
+  }
+
     return (
-        <Route
-        {...rest}
-        render={({ location }) =>
-        auth.User.email ? (
-            children
-          ) : (
-            <Redirect
-              to={{
-                pathname: "/login",
-                state: { from: location }
-              }}
-            />
-          )
-        }
-      />
+      <Route
+      {...rest}
+      render={({ location }) =>
+        User.email ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: { from: location }
+            }}
+          />
+        )
+      }
+    />
     )
 }
 

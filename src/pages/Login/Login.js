@@ -8,18 +8,22 @@ const Login = () => {
   const location = useLocation();
   const uri = location.state?.from || "/";
   const history = useHistory();
-  const { loginWithGoogle, setUser } = useAuth();
+  const { loginWithGoogle, setUser,setIsLoading } = useAuth();
   const googleLogin = () => {
     loginWithGoogle()
       .then((result) => {
         const user = result.user;
         setUser(user);
+        
         history.push(uri);
       })
       .catch((error) => {
         const errorMessage = error.message;
         console.log(errorMessage);
-      });
+      }).finally(() => {
+        setIsLoading(false)
+      })
+      ;
   };
 
   return (

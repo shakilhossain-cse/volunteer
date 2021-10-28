@@ -15,10 +15,10 @@ function App() {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Layout>
           <PrivetRoute path="/events">
             <Event />
           </PrivetRoute>
-          <Layout>
             <Route path="/" component={Home} exact />
           </Layout>
         </Switch>
